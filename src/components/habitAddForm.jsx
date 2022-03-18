@@ -1,13 +1,13 @@
 import React, { memo } from 'react';
 
-const HabitAddForm = memo(({handleAdd}) => {
+const HabitAddForm = memo(({onAdd}) => {
   const formRef = React.createRef();
   const inputRef = React.createRef();
 
   const onSubmit = event => {
     event.preventDefault();
     const name = inputRef.current.value;
-    name && handleAdd(name);
+    name && onAdd(name);
     formRef.current.reset();
   };
 
